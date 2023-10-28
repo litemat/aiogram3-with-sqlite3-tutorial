@@ -33,7 +33,7 @@ async def delete_messages(chat_id, message_id):
 async def cmd_start(message: Message):
     await message.answer(f'{message.from_user.first_name}, привет :)')
 
-    # Запускаем проверку в таблице "videos" -> сть ли вообще видосы?
+    # Запускаем проверку в таблице "videos" -> есть ли вообще видосы?
     db.cur.execute("""SELECT * FROM videos""")
     row = db.cur.fetchone()
 
